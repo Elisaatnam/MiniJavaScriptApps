@@ -1,0 +1,198 @@
+@font-face {
+	font-family: Hachi;
+	src: url(../fonts/HachiMaruPop-Regular.ttf);
+}
+
+:root {
+	--sage: #a8b090;
+	--tea-green: #ccd5aeff;
+	--beige: #e9edc9ff;
+	--cornsilk: #fefae0ff;
+	--papaya-whip: #faedcdff;
+	--buff: #d4a373ff;
+	--coyote: #8c5c2b;
+	--mb: 2vh;
+}
+
+/* GLOBAL SETTINGS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Hachi, sans-serif;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+label,
+input,
+legend {
+	color: var(--coyote);
+}
+h1 {
+	font-size: 4vw;
+}
+
+h2 {
+	font-size: 2vw;
+}
+
+h3 {
+	font-size: 0.8vw;
+}
+
+h3,
+a,
+p {
+	font-weight: 900;
+	color: var(--sage);
+	text-shadow: -2px -2px 1px var(--beige);
+}
+a {
+	text-decoration: none;
+	font-size: 1.5vw;
+	padding: 4vh 0;
+}
+
+p {
+	font-size: 1.5vw;
+}
+
+label,
+legend {
+	font-size: 1.5vw;
+}
+
+input {
+	font-size: 1.2vw;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* HEDAER */
+header {
+	position: fixed;
+	right: 0;
+	width: 25vw;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 2vw;
+}
+/* MAIN */
+main {
+	background-color: var(--tea-green);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+/* SECTIONS GENERAL */
+section {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* FORMS GENERAL */
+form,
+fieldset {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2vh 2vw;
+}
+
+fieldset {
+	border: 1px solid var(--beige);
+}
+
+/* LABEL GENERAL */
+label,
+button {
+	margin-bottom: 0.5vh;
+}
+
+/* INPUT GENERAL */
+input {
+	color: var(--buff);
+	display: block;
+	margin-bottom: var(--mb);
+}
+
+input[type="submit"],
+button {
+	padding: 0.5vh 2vw;
+	color: var(--buff);
+}
+
+/* .change  */
+.big {
+	font-size: 5vw;
+	color: var(--sage);
+	background-color: var(--papaya-whip);
+}
+
+/* .counter */
+article {
+	width: 25vw;
+	height: 50vh;
+	background: linear-gradient(
+		207deg,
+		rgba(185, 194, 158, 1) 25%,
+		rgba(233, 237, 201, 1) 100%
+	);
+	text-align: center;
+}
+
+.calc {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2vw;
+	padding: 0 0.5vw;
+}
+
+/* .check-aqi */
+
+.aqi {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.green {
+	background-color: rgb(55, 165, 55);
+}
+
+.yellow {
+	background-color: rgb(203, 203, 37);
+}
+
+.orange {
+	background-color: rgb(255, 89, 0);
+}
+
+.green,
+.yellow,
+.orange {
+	transition: background-color 1s ease-in-out;
+}

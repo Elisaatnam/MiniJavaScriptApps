@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mini JS Apps</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="#home">Home 🏠</a>
+				<a href="#double-me">Double Number ✖️2️⃣</a>
+				<a href="#birth-year">How old are you❔❔</a>
+				<a href="#age-diff">Age difference ➖</a>
+				<a href="#change">Change Style 💅</a>
+				<a href="#counter">Counter 🧮</a>
+				<a href="#rgb-generator">RGB Generator 🔴🟢🔵</a>
+				<a href="#aqi-check">Check Air Quality 🌬️</a>
+			</nav>
+		</header>
+
+		<main>
+			<section id="home">
+				<h1>Hello my friend!</h1>
+				<h2>Have fun withe these small Apps</h2>
+				<p>
+					<a href="https://github.com/Elisaatnam" target="_blank"
+						>👉...don't forget to check my GitHub Profile👈</a
+					>
+				</p>
+			</section>
+			<section id="double-me" class="double-me">
+				<form onsubmit="multiply(); return false">
+					<fieldset>
+						<legend>Multiply Number times 2</legend>
+						<label for="num">Type any number</label>
+						<input type="number" id="num" class="num" />
+						<br />
+						<input type="submit" value="double me" />
+						<p class="output"></p>
+					</fieldset>
+				</form>
+			</section>
+
+			<section id="birth-year" class="birth-year">
+				<form onsubmit="calcAge(); return false">
+					<label for="dob">Enter year of birth:</label>
+					<input type="number" id="dob" class="dob" />
+					<input type="submit" value="How old am I?" />
+				</form>
+				<p class="output2"></p>
+			</section>
+
+			<section id="age-diff" class="age-diff">
+				<form onsubmit="calcDiff(); return false">
+					<label for="age1">Age 1:</label>
+					<input type="number" id="age1" />
+					<br />
+					<label for="age2">Age 2:</label>
+					<input type="number" id="age2" />
+					<br />
+					<input type="submit" value="Calculate difference" />
+				</form>
+				<p class="output3"></p>
+			</section>
+
+			<section id="change" class="change">
+				<h2 class="change-h2">This is a H2</h2>
+				<button onclick="change()">Change H2</button>
+				<button onclick="reset2()">Reset H2</button>
+			</section>
+
+			<section id="counter" class="counter">
+				<article>
+					<h1>Counter</h1>
+					<h2 class="output4"></h2>
+					<div class="calc">
+						<button onclick="cal(1)">+1</button>
+						<button onclick="cal(-1)">-1</button>
+						<button onclick="cal(10)">+10</button>
+						<button onclick="cal(-10)">-10</button>
+						<button onclick="cal(100)">+100</button>
+						<button onclick="cal(-100)">-100</button>
+						<button onclick="reset()">reset</button>
+						<button onclick="multi()">*2</button>
+					</div>
+				</article>
+			</section>
+
+			<section id="rgb-generator" class="rgb-generator">
+				<h2>HEY! CHANGE MY COLOR!</h2>
+				<form onsubmit="return false">
+					<label for="red">RED</label>
+					<input
+						onchange="changeBackground()"
+						;
+						type="range"
+						id="red"
+						name="red"
+						min="0"
+						max="255"
+						value="0"
+						step="1"
+					/>
+					<label for="green">GREEN</label>
+					<input
+						onchange="changeBackground()"
+						;
+						type="range"
+						id="green"
+						name="green"
+						min="0"
+						max="255"
+						value="0"
+						step="1"
+					/>
+					<label for="blue">BLUE</label>
+					<input
+						onchange="changeBackground()"
+						;
+						type="range"
+						id="blue"
+						name="blue"
+						min="0"
+						max="255"
+						value="0"
+						step="1"
+					/>
+				</form>
+				<p class="output5"></p>
+			</section>
+
+			<section id="aqi-check" class="aqi-check">
+				<form class="aqi">
+					<label for="range"
+						>AQI (Air Quality Index): <span class="output6"></span
+					></label>
+					<input
+						onchange="checkAirQuality()"
+						type="range"
+						id="range"
+						min="0"
+						max="150"
+						value="0"
+					/>
+					<h3 class="concern">Level of health concern:</h3>
+					<h3 class="effect">Level of health effect:</h3>
+				</form>
+			</section>
+		</main>
+
+		<footer></footer>
+		<script type="text/javascript" src="./assets/js/main.js"></script>
+	</body>
+</html>
